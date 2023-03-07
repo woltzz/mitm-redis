@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    mitm-redis:
+        container_name: mitm-redis
+        command: mitmdump
+        ports:
+            - 8080:8080
+            - 8081:8081
+        volumes:
+            - D:/Code/homelab/mitm-redis/app/config:/mitm-redis/app/config
+        image: woltz/mitm-redis:0.1
